@@ -1,6 +1,6 @@
 -name: satheesh
  host: all
  task:
-   -name: Hai I am printing from play1
-    ansible.builtin.debug:
+   - name: Hai I am printing from play1
+     ansible.builtin.debug:
       msg: "Hai, I am printing from play1"
