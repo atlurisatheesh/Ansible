@@ -1,13 +1,13 @@
--name: satheesh
- hosts: all
- tasks:
-   - name: Hai I am printing from play1
-     ansible.builtin.debug:
-       msg: "Hai, I am printing from play1"
+- name: Play1  
+  hosts: all                        # groupName in the inventory file 
+  tasks: 
+    - name: Printing Hai from task1 of play1
+      ansible.builtin.debug:
+        msg: "Hai from task1 of play1"
 
-   - name: Printing Hai from task2 of play1
-     ansible.builtin.debug:
-       msg: "DevOps from batch55 of play1"
+    - name: Printing Hai from task2 of play1
+      ansible.builtin.debug:
+        msg: "DevOps from batch55 of play1"
 
 - name: Play2  
   hosts: all                        # groupName in the inventory file 
