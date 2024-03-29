@@ -2,6 +2,10 @@
   hosts: all                        # groupName in the inventory file 
   vars:
     URL: play.google.com
+  vars_prompt:
+    - name: URNAME
+      prompt: enter the name
+      private: true
   tasks: 
     - name: Printing Hai from task1 of play1
       ansible.builtin.debug:
@@ -15,4 +19,4 @@
   tasks: 
     - name: Printing Hai from task1 of play2
       ansible.builtin.debug:
-        msg: "Olaaaaaaaaaaaaaa : task1 from play2"
+        msg: "printing the message {{URL}}"
