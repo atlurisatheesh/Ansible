@@ -8,7 +8,7 @@
       private: false
 
   vars_files: 
-     - "{{ENV}.yml}"
+     - "{{ENV}}.yml"
   tasks: 
     - name: Printing Hai from task1 of play1
       ansible.builtin.debug:
