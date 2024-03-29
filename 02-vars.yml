@@ -4,7 +4,7 @@
     URL: play.google.com
   
   vars_files: 
-    - dev.yml 
+    - "{{ENV}}.yml"
 
   vars_prompt:
     - name: URNAME
