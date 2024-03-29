@@ -6,7 +6,14 @@
       ansible.builtin.shell: uptime
       register: OUT
         
+- name: Printing the uptime
+      ansible.builtin.debug:  
+        msg: "{{OUT.stdout}}" 
 
-    - name: Printing the mac address
-      ansible.builtin.debug:
-        msg: printing the shell output "{{OUT}}"
+    - name: Declaring the variable 
+      set_fact:  
+        EXITCODE: "{{OUT.rc}}" 
+  
+    - name: Printing the uptime exit code 
+      ansible.builtin.debug:  
+        msg: uptime exit code is {{EXITCODE}}
