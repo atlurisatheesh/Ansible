@@ -1,0 +1,11 @@
+- name: Demo on facts
+  hosts: all
+          
+  tasks: 
+    - name: demo for shell 
+      ansible.builtin.shell: uptime
+        
+
+    # - name: Printing the mac address
+    #   ansible.builtin.debug:
+    #     msg: Mac Address Of The Node Is {{ansible_default_ipv4.macaddress}} 
