@@ -9,4 +9,4 @@
 
     - name: Printing the mac address
       ansible.builtin.debug:
-        msg: printing the shell output {{OUT}}
+        msg: printing the shell output "{{OUT}}"
