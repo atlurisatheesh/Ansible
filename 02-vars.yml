@@ -9,7 +9,7 @@
 
     
 - name: Play2  
-  hosts: prod                       # groupName in the inventory file 
+  hosts: all                      # groupName in the inventory file 
   vars:
     URL: curl.googel.com
   tasks: 
