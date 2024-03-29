@@ -29,4 +29,8 @@
       ansible.builtin.debug:
         msg: "printing the message {{URL}}"
 
+    - name: This is env specific
+      ansible.builtin.debug:
+        msg: Type Of Instance To Be Used {{INS_TYPE}}
+
      
