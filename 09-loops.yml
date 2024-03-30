@@ -1,6 +1,6 @@
 - name: Demo on loops
   hosts: all
-  task:
+  tasks:
     - name: Printing the user details 
       ansible.builtin.debug:  
         msg: "value of item {{item}}"
