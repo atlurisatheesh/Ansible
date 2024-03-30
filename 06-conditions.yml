@@ -1,7 +1,7 @@
 - name: Demo on conditions
   hosts: all
   vars:
-    action: false
+    action: true
   tasks: 
     # - name: Run this only when the discribution is CentOS  
     #   ansible.builtin.debug:
