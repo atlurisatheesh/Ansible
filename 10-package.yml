@@ -4,7 +4,6 @@
   tasks:
     - name: Installing nginx
       ansible.builtin.debug:
-        # msg: "Nginx is to Installing"
-          name: nginx
-          state: present
+        name: nginx
+        state: present
 
