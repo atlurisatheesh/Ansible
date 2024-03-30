@@ -2,4 +2,4 @@
   become: yes
   hosts: frontend
   roles: 
-     - frontend
+   - frontend
