@@ -39,5 +39,5 @@
     enabled: yes
     daemon_reload: yes 
 
-- name: configuring the sevice
-  ansible.builtin.template: set-hostname {{COMPONENT}}-{{ENV}}
+# - name: configuring the sevice
+#   ansible.builtin.template: set-hostname {{COMPONENT}}-{{ENV}}
