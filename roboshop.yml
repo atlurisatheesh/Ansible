@@ -1,0 +1,6 @@
+- name: configuring the frontend
+  become: yes
+  hosts: frontend
+  tasks:
+    roles: 
+     - frontend
