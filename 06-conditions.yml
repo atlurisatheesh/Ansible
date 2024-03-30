@@ -3,10 +3,10 @@
   vars:
     action: false
   tasks: 
-    - name: Run this only when the discribution is CentOS  
-      ansible.builtin.debug:
-        msg: Welcome To Centos {{ansible_distribution}}
-      when: ansible_distribution == "CentOS"
+    # - name: Run this only when the discribution is CentOS  
+    #   ansible.builtin.debug:
+    #     msg: Welcome To Centos {{ansible_distribution}}
+    #   when: ansible_distribution == "CentOS"
 
     - name: Run this only when the discribution is Ubuntu  
       ansible.builtin.debug:
