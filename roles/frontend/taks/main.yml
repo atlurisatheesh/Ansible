@@ -20,21 +20,21 @@
     dest: /usr/share/nginx/html/ 
     remote_src: yes                    # This ensure your source file to copy is non remote machine.
 
-- name: Copying the proxy file
-  ansible.builtin.template:
-    src: roboshop.conf 
-    dest: /etc/nginx/default.d/roboshop.conf
-  notify: Restarting Nginx                           # Whenever there is a change in this task, then this notify handler will call the task RESTARTING NGINX
+# - name: Copying the proxy file
+#   ansible.builtin.template:
+#     src: roboshop.conf 
+#     dest: /etc/nginx/default.d/roboshop.conf
+#   notify: Restarting Nginx                           # Whenever there is a change in this task, then this notify handler will call the task RESTARTING NGINX
 
-- name: Copying the nginx config
-  ansible.builtin.template:
-    src: nginx.conf 
-    dest: /etc/nginx/nginx.conf
-  notify: Restarting Nginx    
+# - name: Copying the nginx config
+#   ansible.builtin.template:
+#     src: nginx.conf 
+#     dest: /etc/nginx/nginx.conf
+#   notify: Restarting Nginx    
 
-- name: Starting Nginx 
-  systemd:
-    name: nginx
-    state: started
-    enabled: yes
-    daemon_reload: yes 
+# - name: Starting Nginx 
+#   systemd:
+#     name: nginx
+#     state: started
+#     enabled: yes
+#     daemon_reload: yes 
