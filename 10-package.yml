@@ -1,9 +1,10 @@
 - name: Demo on packages
   hosts: all
+  become: yes
   tasks:
     - name: Installing nginx
       ansible.builtin.debug:
         msg: "Nginx is to Installing"
         name: nginx
         state: present
-        
+
