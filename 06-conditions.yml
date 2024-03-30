@@ -1,0 +1,28 @@
+- name: Demo on conditions
+  hosts: all
+  vars:
+    action: false
+  tasks: 
+    - name: Run this only when the discribution is CentOS  
+      ansible.builtin.debug:
+        msg: Welcome To Centos {{ansible_distribution}}
+      when: ansible_distribution == "CentOS"
+
+    - name: Run this only when the discribution is Ubuntu  
+      ansible.builtin.debug:
+        msg: Welcome To Ubuntu {{ansible_distribution}}
+      when: ansible_distribution == "Ubuntu" 
+    
+    - name: Run this action 
+      ansible.builtin.debug:
+        msg: Action is true 
+      when: action 
+
+    - name: Run this task when the action variale is declared 
+      ansible.builtin.debug:
+        msg: Action variable is declared
+      when: action is not defined
+
+# Older versions of ansible uses undefined, latest version os ansible users not defined 
+# defined , not defined, true, false , succeded , failure all of them are predefined keywords as per the documentation 
+# Ref : https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html
