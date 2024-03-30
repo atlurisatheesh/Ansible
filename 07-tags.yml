@@ -1,0 +1,8 @@
+- name: Demo on tags
+  host: all
+  tasks: 
+    - name: This is frontend task
+      ansible.builtin.debug:
+        msg: Installig frontend
+        tags: frontend
+
