@@ -4,5 +4,5 @@
     - name: This is frontend task
       ansible.builtin.debug:
         msg: Installig frontend
-        tags: frontend
+      tags: frontend
 
