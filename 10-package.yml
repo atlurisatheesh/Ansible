@@ -1,6 +1,6 @@
 - name: Demo on package installation  
   hosts: all 
-  # become: yes
+  become: yes
   tasks: 
     - name: Removing Nginx
       ansible.builtin.package:
