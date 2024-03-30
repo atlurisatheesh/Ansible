@@ -6,3 +6,27 @@
         msg: Installig frontend
       tags: frontend
 
+    - name: This is frontend task
+      ansible.builtin.debug:
+        msg: Starting frontend
+      tags: frontend
+
+    - name: This is backend task
+      ansible.builtin.debug:
+        msg: Installig backend
+      tags: backend
+
+    - name: This is backend task
+      ansible.builtin.debug:
+        msg: Starting backend
+      tags: backend
+
+    - name: This is DB task
+      ansible.builtin.debug:
+        msg: Installig DB
+      tags: DB
+
+    - name: This is DB task
+      ansible.builtin.debug:
+        msg: Starting DB
+      tags: DB
