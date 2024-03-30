@@ -1,6 +1,6 @@
 - name: Demo on packages
   hosts: all
-  become: yes
+  # become: yes
   tasks:
     - name: Installing nginx
       ansible.builtin.debug:
