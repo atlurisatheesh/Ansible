@@ -1,7 +1,5 @@
 - name: Demo on tags
   hosts: all
-  vars:
-    action: false
   tasks: 
     - name: This is frontend task
       ansible.builtin.debug:
