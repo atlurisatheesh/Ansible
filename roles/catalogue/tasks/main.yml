@@ -32,5 +32,22 @@
     group: "{{APPUSER}}"
     remote_src: yes    
 
+- name: generating the artifacts
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
+
+- name: Copying the file to {{APPUSER}} home directory
+  ansible.builtin.templates:
+    src: systemd.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
+    remote_src: yes 
+
+- name: Starting {{COMPONENT}} 
+  systemd:
+    name: "{{COMPONENT}}"
+    state: started
+    enabled: yes
+    daemon_reload: yes 
+
 - name: configuring the sevice
   ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}               
