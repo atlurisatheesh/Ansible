@@ -36,4 +36,4 @@
     - catalogue
 
 - name: configuring the sevice
-#   ansible.builtin.template: set-hostname {{COMPONENT}}-{{ENV}}
+  ansible.builtin.template: set-hostname {{COMPONENT}}-{{ENV}}
