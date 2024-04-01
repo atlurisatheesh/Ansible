@@ -1,3 +1,8 @@
+- name: calling the {{COMPONENT}} 
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs
+
 - name: Comfiguring node js
   ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -
 
