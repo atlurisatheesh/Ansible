@@ -36,7 +36,7 @@
   community.general.npm:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
 
-- name: Copying the file to {{APPUSER}} home directory
+- name: Copying the systemd files 
   ansible.builtin.template:
     src: systemd.service
     dest: /etc/systemd/system/{{COMPONENT}}.service
