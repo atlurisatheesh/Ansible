@@ -24,7 +24,7 @@
   ansible.builtin.template:
     src: roboshop.conf 
     dest: /etc/nginx/default.d/roboshop.conf
-  # notify: Restarting Nginx                           # Whenever there is a change in this task, then this notify handler will call the task RESTARTING NGINX
+  notify: Restarting Nginx                           # Whenever there is a change in this task, then this notify handler will call the task RESTARTING NGINX
 
 # - name: Copying the nginx config
 #   ansible.builtin.template:
