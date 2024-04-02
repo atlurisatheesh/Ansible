@@ -16,27 +16,27 @@
     name: common
     tasks_from: download_and_extract
 
-# - name: Updating the UID of {{COMPONENT}}.ini file
-#   ansible.builtin.lineinfile:
-#     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
-#     regexp: '^uid'
-#     line: uid = {{USERINFO.uid}} 
+- name: Updating the UID of {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^uid'
+    line: uid = {{USERINFO.uid}} 
 
-# - name: Updating the GID of {{COMPONENT}}.ini file
-#   ansible.builtin.lineinfile:
-#     path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
-#     regexp: '^gid'
-#     line: gid = {{USERINFO.group}}
+- name: Updating the GID of {{COMPONENT}}.ini file
+  ansible.builtin.lineinfile:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/{{COMPONENT}}.ini
+    regexp: '^gid'
+    line: gid = {{USERINFO.group}}
 
-# - name: Installing app dependencies
-#   ansible.builtin.pip:
-#     requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt 
-#     executable: pip3.6
+- name: Installing app dependencies
+  ansible.builtin.pip:
+    requirements: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt 
+    executable: pip3.6
 
-# - name: Configuring {{COMPONENT}} Service
-#   ansible.builtin.include_role:
-#     name: common
-#     tasks_from: config_svervice
+- name: Configuring {{COMPONENT}} Service
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: config_svervice
 
 - name: Configuring Name
   ansible.builtin.include_role:
