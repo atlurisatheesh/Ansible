@@ -21,3 +21,6 @@ mysql-dev.roboshop.internal
 
 [shipping]
 shipping-dev.roboshop.internal
+
+[rabbit]
+rabbit-dev.roboshop.internal
