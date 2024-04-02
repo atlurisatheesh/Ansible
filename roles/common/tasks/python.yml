@@ -12,11 +12,10 @@
     tasks_from: create_user
 
 - name: Download and extracting {{COMPONENT}}
-  ansible.builtin.unarchive:
-    src: https://github.com/stans-robot-project/{{COMPONENT}}/archive/main.zip
-    dest: /tmp 
-    remote_src: yes 
-    
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download_and_extract
+
 - name: Configuring {{COMPONENT}}
   ansible.builtin.include_role:
     name: common
