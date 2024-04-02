@@ -16,8 +16,8 @@
 
 - name: Starting {{COMPONENT}} 
   systemd:
-    name: mongod
-    state: restarted
+    name: mysqld
+    state: started
     enabled: yes
 
 - name: Verifying the password
