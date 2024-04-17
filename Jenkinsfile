@@ -1,4 +1,4 @@
-pipelins {
+pipeline {
     agent any
     environment {                                  // Pipeline Variables : All the stages of the pipeline can use it.
         
